@@ -1,0 +1,9 @@
+---
+- name: install pkg...
+  become: yes
+  become_user: root
+  with_items:
+    - lftp
+  package:
+    name: '{{item}}'
+    state: present
