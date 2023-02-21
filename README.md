@@ -1,6 +1,6 @@
 andrewrothstein.lftp
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-lftp.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-lftp)
+![Build Status](https://github.com/andrewrothstein/ansible-lftp/actions/workflows/build.yml/badge.svg)
 
 Installs [lftp](https://lftp.yar.ru/).
 
