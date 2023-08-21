@@ -1,5 +1,10 @@
-
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
+    - role: '{{ playbook_dir }}'
+  tasks:
+    - command: lftp --version
+      register: lftp_test_output
+    - name: lftp --version
+      debug:
+        msg: '{{ lftp_test_output.stdout }}'
