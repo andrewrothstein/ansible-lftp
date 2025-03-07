@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.lftp
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: lftp --version
+    - name: Executing 'lftp --version'
+      ansible.builtin.command: lftp --version
+      changed_when: false
       register: lftp_test_output
-    - name: lftp --version
-      debug:
+    - name: Output from 'lftp --version'
+      ansible.builtin.debug:
         msg: '{{ lftp_test_output.stdout }}'
